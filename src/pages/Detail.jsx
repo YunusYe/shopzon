@@ -20,7 +20,7 @@ const Detail = () => {
   return (
     <div>
       {
-        productDetailStatus == "LOADING" ? <Loading/> : <DetailComp productDetail={productDetail} />
+        productDetailStatus === "LOADING" ? <Loading/> : <DetailComp productDetail={productDetail} />
       }
     </div>
   );

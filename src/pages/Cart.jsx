@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { getCartTotal } from '../redux/cartSlice';
 import CartComp from '../components/cart/CartComp';
 
+
 const Cart = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -11,6 +12,10 @@ const Cart = () => {
   
     console.log(carts,totalAmount,itemCount,"carts");
   
+
+
+    useNavigate(() => [])
+
     useEffect(() => {
       dispatch(getCartTotal())
     },[dispatch])
