@@ -1,20 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { getCartTotal } from '../redux/cartSlice';
 import CartComp from '../components/cart/CartComp';
 
 
 const Cart = () => {
-    const navigate = useNavigate()
     const dispatch = useDispatch()
     const {carts,totalAmount, itemCount} = useSelector(state => state.carts)
   
     console.log(carts,totalAmount,itemCount,"carts");
-  
-
-
-    useNavigate(() => [])
 
     useEffect(() => {
       dispatch(getCartTotal())
